@@ -152,7 +152,7 @@ public class MSButton
         else if(mines.contains(this)){
             displayLosingMessage();
         }else if(countMines(this.myRow,this.myCol) > 0){
-            setLabel(countMines(this.myRow,this.myCol));
+            setLabel("" + countMines(this.myRow,this.myCol));
         }else for(int r = myRow-1; r<= myRow+1; r++){
                 for(int c = myCol-1; c<= myCol+1; c++){
                     if(isValid(r,c) && buttons[r][c].clicked == false && !(r == myRow && c == myCol)){
